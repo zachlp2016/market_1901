@@ -52,9 +52,9 @@ pry(main)> vendor.inventory
 
 ## Iteration 2 - Market and Vendors
 
-A Market is responsible for keeping track of Vendors. It should have a method called `vendors_that_sell` that takes an argument of an item represented as a String. It will returns a list of Vendors that have that item in stock.
+A Market is responsible for keeping track of Vendors. It should have a method called `vendors_that_sell` that takes an argument of an item represented as a String. It will return a list of Vendors that have that item in stock.
 
-Use `TDD` to create a `Market` class that responds to the following interaction pattern:
+Use TDD to create a `Market` class that responds to the following interaction pattern:
 
 ```ruby
 pry(main)> require './lib/vendor'
@@ -107,6 +107,9 @@ pry(main)> market.add_vendor(vendor_3)
 
 pry(main)> market.vendors
 #=> [#<Vendor:0x00007fe1348a1160...>, #<Vendor:0x00007fe1349bed40...>, #<Vendor:0x00007fe134910650...>]
+
+pry(main)> market.vendor_names
+#=> ["Rocky Mountain Fresh", "Ba-Nom-a-Nom", "Palisade Peach Shack"]
 
 pry(main)> market.vendors_that_sell("Peaches")
 #=> [#<Vendor:0x00007fe1348a1160...>, #<Vendor:0x00007fe134910650...>]
@@ -179,7 +182,7 @@ Add a method to your Market class called `sell` that takes an item and a quantit
 
 1. If the Market does not have enough of the item in stock to satisfy the given quantity, this method should return `false`.
 
-2. If the Market's has enough of the item in stock to satisfy the given quantity, this method should return `true`. Additionally, this method should reduce the stock of the Vendors. It should look through the Vendors in the order they were added and sell the item to the first Vendor with that item in stock. If that Vendor does not have enough stock to satisfy the given quantity, the Vendor's entire stock of that item will be depleted, and the remaining quantity will be sold to the next vendor with that item in stock. It will follow this pattern until the entire quantity requested has been sold.
+2. If the Market's has enough of the item in stock to satisfy the given quantity, this method should return `true`. Additionally, this method should reduce the stock of the Vendors. It should look through the Vendors in the order they were added and sell the item from the first Vendor with that item in stock. If that Vendor does not have enough stock to satisfy the given quantity, the Vendor's entire stock of that item will be depleted, and the remaining quantity will be sold from the next vendor with that item in stock. It will follow this pattern until the entire quantity requested has been sold.
 
 For example, suppose vendor_1 has 35 `"Peaches"` and vendor_3 has 65 `"Peaches"`, and vendor_1 was added to the market first. If the method `sell("Peaches", 40)` is called, the method should return `true`, vendor_1's new stock of `"Peaches"` should be 0, and vendor_3's new stock of `"Peaches"` should be 60.
 
