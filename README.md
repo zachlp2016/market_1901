@@ -32,19 +32,16 @@ pry(main)> vendor.check_stock("Peaches")
 #=> 0
 
 pry(main)> vendor.stock("Peaches", 30)
-#=> 30
 
 pry(main)> vendor.check_stock("Peaches")
 #=> 30
 
 pry(main)> vendor.stock("Peaches", 25)
-#=> 55
 
 pry(main)> vendor.check_stock("Peaches")
 #=> 55
 
 pry(main)> vendor.stock("Tomatoes", 12)
-#=> 12
 
 pry(main)> vendor.inventory
 #=> {"Peaches"=>55, "Tomatoes"=>12}
@@ -78,34 +75,26 @@ pry(main)> vendor_1 = Vendor.new("Rocky Mountain Fresh")
 #=> #<Vendor:0x00007fe1348a1160...>
 
 pry(main)> vendor_1.stock("Peaches", 35)    
-#=> 35
 
 pry(main)> vendor_1.stock("Tomatoes", 7)    
-#=> 7
 
 pry(main)> vendor_2 = Vendor.new("Ba-Nom-a-Nom")    
 #=> #<Vendor:0x00007fe1349bed40...>
 
 pry(main)> vendor_2.stock("Banana Nice Cream", 50)    
-#=> 50
 
 pry(main)> vendor_2.stock("Peach-Raspberry Nice Cream", 25)    
-#=> 25
 
 pry(main)> vendor_3 = Vendor.new("Palisade Peach Shack")    
 #=> #<Vendor:0x00007fe134910650...>
 
 pry(main)> vendor_3.stock("Peaches", 65)    
-#=> 65
 
 pry(main)> market.add_vendor(vendor_1)    
-#=> [#<Vendor:0x00007fe1348a1160...>]
 
 pry(main)> market.add_vendor(vendor_2)    
-#=> [#<Vendor:0x00007fe1348a1160...>, #<Vendor:0x00007fe1349bed40...>]
 
-pry(main)> market.add_vendor(vendor_3)    
-#=> [#<Vendor:0x00007fe1348a1160...>, #<Vendor:0x00007fe1349bed40...>, #<Vendor:0x00007fe134910650...>]
+pry(main)> market.add_vendor(vendor_3)
 
 pry(main)> market.vendors
 #=> [#<Vendor:0x00007fe1348a1160...>, #<Vendor:0x00007fe1349bed40...>, #<Vendor:0x00007fe134910650...>]
@@ -142,34 +131,26 @@ pry(main)> vendor_1 = Vendor.new("Rocky Mountain Fresh")
 #=> #<Vendor:0x00007fe1348a1160...>
 
 pry(main)> vendor_1.stock("Peaches", 35)    
-#=> 35
 
 pry(main)> vendor_1.stock("Tomatoes", 7)    
-#=> 7
 
 pry(main)> vendor_2 = Vendor.new("Ba-Nom-a-Nom")    
 #=> #<Vendor:0x00007fe1349bed40...>
 
 pry(main)> vendor_2.stock("Banana Nice Cream", 50)    
-#=> 50
 
 pry(main)> vendor_2.stock("Peach-Raspberry Nice Cream", 25)    
-#=> 25
 
 pry(main)> vendor_3 = Vendor.new("Palisade Peach Shack")    
 #=> #<Vendor:0x00007fe134910650...>
 
 pry(main)> vendor_3.stock("Peaches", 65)    
-#=> 65
 
 pry(main)> market.add_vendor(vendor_1)    
-#=> [#<Vendor:0x00007fe1348a1160...>]
 
 pry(main)> market.add_vendor(vendor_2)    
-#=> [#<Vendor:0x00007fe1348a1160...>, #<Vendor:0x00007fe1349bed40...>]
 
 pry(main)> market.add_vendor(vendor_3)    
-#=> [#<Vendor:0x00007fe1348a1160...>, #<Vendor:0x00007fe1349bed40...>, #<Vendor:0x00007fe134910650...>]
 
 pry(main)> market.sorted_item_list
 #=> ["Banana Nice Cream", "Peach-Raspberry Nice Cream", "Peaches", "Tomatoes"]
@@ -204,34 +185,26 @@ pry(main)> vendor_1 = Vendor.new("Rocky Mountain Fresh")
 #=> #<Vendor:0x00007fe1348a1160...>
 
 pry(main)> vendor_1.stock("Peaches", 35)    
-#=> 35
 
 pry(main)> vendor_1.stock("Tomatoes", 7)    
-#=> 7
 
 pry(main)> vendor_2 = Vendor.new("Ba-Nom-a-Nom")    
 #=> #<Vendor:0x00007fe1349bed40...>
 
 pry(main)> vendor_2.stock("Banana Nice Cream", 50)    
-#=> 50
 
 pry(main)> vendor_2.stock("Peach-Raspberry Nice Cream", 25)    
-#=> 25
 
 pry(main)> vendor_3 = Vendor.new("Palisade Peach Shack")    
 #=> #<Vendor:0x00007fe134910650...>
 
 pry(main)> vendor_3.stock("Peaches", 65)    
-#=> 65
 
 pry(main)> market.add_vendor(vendor_1)    
-#=> [#<Vendor:0x00007fe1348a1160...>]
 
 pry(main)> market.add_vendor(vendor_2)    
-#=> [#<Vendor:0x00007fe1348a1160...>, #<Vendor:0x00007fe1349bed40...>]
 
 pry(main)> market.add_vendor(vendor_3)    
-#=> [#<Vendor:0x00007fe1348a1160...>, #<Vendor:0x00007fe1349bed40...>, #<Vendor:0x00007fe134910650...>]
 
 pry(main)> market.sell("Peaches", 200)
 #=> false
