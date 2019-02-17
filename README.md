@@ -13,7 +13,7 @@
 
 The Market will need to keep track of its Vendors. Each Vendor will be able to report its total inventory, stock items, and return the quantity of items. Any item not in stock should return `0` by default. Items will be represented as a String.
 
-Use TDD to create a `Vendor` class that responds to the following interaction pattern:
+Use TDD to complete the `Vendor` class that responds to the following interaction pattern:
 
 ```ruby
 pry(main)> require './lib/vendor'
